@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "unlimitedbannerlayers",
+  "version": "${version}",
+  "name": "UnlimitedBannerLayers",
+  "description": "Sets the max banner layer limit to 16 instead of 6",
+  "authors": [
+    "IThundxr"
+  ],
+  "contact": {
+    "website": "https://ithundxr.dev",
+    "repo": "https://github.com/ithundxr/UnlimitedBannersLayers"
+  },
+  "license": "MIT",
+  "entrypoints": {
+    "main": [
+      "dev.ithundxr.unlimitedbannerlayers.UnlimitedBannerLayers"
+    ]
+  },
+  "mixins": [
+    "unlimitedbannerlayers.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
