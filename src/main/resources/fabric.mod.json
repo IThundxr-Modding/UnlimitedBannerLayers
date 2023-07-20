@@ -4,6 +4,7 @@
   "version": "${version}",
   "name": "UnlimitedBannerLayers",
   "description": "Sets the max banner layer limit to 16 instead of 6",
+  "icon": "icon.png",
   "authors": [
     "IThundxr"
   ],
@@ -22,6 +23,7 @@
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
+    "fabric-api": ">=${fabric_api_version}",
     "minecraft": "${minecraft_version}"
   }
 }

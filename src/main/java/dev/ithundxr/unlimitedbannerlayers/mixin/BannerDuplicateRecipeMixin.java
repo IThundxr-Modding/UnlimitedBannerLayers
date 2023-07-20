@@ -1,5 +1,6 @@
 package dev.ithundxr.unlimitedbannerlayers.mixin;
 
+import dev.ithundxr.unlimitedbannerlayers.Config;
 import dev.ithundxr.unlimitedbannerlayers.UnlimitedBannerLayers;
 import net.minecraft.recipe.BannerDuplicateRecipe;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,11 +12,11 @@ public class BannerDuplicateRecipeMixin {
 
     @ModifyConstant(method = "matches(Lnet/minecraft/inventory/RecipeInputInventory;Lnet/minecraft/world/World;)Z", constant = @Constant(intValue = 6))
     public int getLimitMatches(int limit) {
-        return UnlimitedBannerLayers.CONFIG.maxLayerLimit();
+        return Config.maxLayerLimit;
     }
 
     @ModifyConstant(method = "craft(Lnet/minecraft/inventory/RecipeInputInventory;Lnet/minecraft/registry/DynamicRegistryManager;)Lnet/minecraft/item/ItemStack;", constant = @Constant(intValue = 6))
     public int getLimitCraft(int limit) {
-        return UnlimitedBannerLayers.CONFIG.maxLayerLimit();
+        return Config.maxLayerLimit;
     }
 }
