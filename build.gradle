@@ -44,11 +44,6 @@ modrinth {
     loaders = ["fabric", "quilt"]
 }
 
-tasks.register("publishMod") {
-    dependsOn("build")
-    dependsOn("publishModrinth")
-}
-
 def targetJavaVersion = 17
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
