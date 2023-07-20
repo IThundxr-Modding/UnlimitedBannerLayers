@@ -1,7 +1,8 @@
 name: Build Release
+on: [workflow_dispatch]
 
-on:
-  workflow_dispatch:
+env:
+  MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
 
 jobs:
   build:
