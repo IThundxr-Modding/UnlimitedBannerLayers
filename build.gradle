@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.2-SNAPSHOT'
+    id 'fabric-loom' version '1.8.+'
     id 'maven-publish'
     id "me.shedaniel.unified-publishing" version "0.1.+" // https://github.com/shedaniel/unified-publishing
 }
@@ -15,7 +15,7 @@ repositories {
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${minecraft_version}"
-    mappings "net.fabricmc:yarn:${yarn_mappings}:v2"
+    mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
@@ -71,7 +71,7 @@ unifiedPublishing {
     }
 }
 
-def targetJavaVersion = 17
+def targetJavaVersion = 21
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
     if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
